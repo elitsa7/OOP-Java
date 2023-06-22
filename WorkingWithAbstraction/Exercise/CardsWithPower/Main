@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner (System.in);
+        CardRank cardRank = CardRank.valueOf(scanner.nextLine());
+        CardSuit cardSuit = CardSuit.valueOf(scanner.nextLine());
+        int cardPower = cardRank.getPower() + cardSuit.getPower();
+        //"Card name: {card name} of {suit name}; Card power: {power of
+        //rank + power of suit}".
+        System.out.printf("Card name: %s of %s; Card power: %d",cardRank,cardSuit,cardPower);
+    }
+}
